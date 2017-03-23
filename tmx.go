@@ -154,6 +154,8 @@ type Property struct {
 	Value string `xml:"value,attr"`
 }
 
+type Properties []Property
+
 func (d *Data) decodeBase64() (data []byte, err error) {
 	rawData := bytes.TrimSpace(d.RawData)
 	r := bytes.NewReader(rawData)
